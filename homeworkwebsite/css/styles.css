@@ -1,0 +1,267 @@
+/* ================================
+   BASE STYLES
+   ================================ */
+
+/* Set  font, background, text color, and spacing */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #000;       /* Black background */
+  color: #fff;                  /* White text */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ================================
+   HEADER & FOOTER
+   ================================ */
+
+/* Style header and footer with dark background and centered text */
+header, footer {
+  background-color: #111;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Footer text size */
+footer {
+  font-size: 0.9em;
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+/* Overrule default list styling and center nav links */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+/* Base link styling */
+nav a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0.2em;
+  background-color: #222;
+  color: #fff;
+  border: 2px dashed #ff4500; /*  Pumpkin border */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover and focus effects for nav links */
+nav a:hover,
+nav a:focus {
+  background-color: #ff4500; /*  Pumpkin background */
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+
+/* Main heading (site intro) */
+h1 {
+  color: #ff0000; /* Red */
+}
+
+/* Subheadings */
+h2, h3 {
+  color: #ff8c00; /* Pumpkin again!  */
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+/* Intro heading block (Hello, I'm Jhayne) */
+.intro-heading {
+  margin-bottom: 1em;
+}
+
+.intro-heading h2 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #ff8c00; /* Orange */
+}
+
+.intro-heading h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #ff0000; /* Red */
+  line-height: 1.1;
+}
+
+/* Special font for meeee because fonts! */
+.name-accent {
+  font-family: 'Beth Ellen', cursive;
+  font-weight: 400; 
+  font-size: 1.3em; 
+  color: #ff0368;  
+  display: inline-block;   
+  margin-bottom: .5em;      
+}
+
+/* ================================
+   MAIN CONTENT LAYOUT
+   ================================ */
+
+/* Add padding around main content */
+main {
+  padding: 2em;
+}
+
+/* Intro section layout: image and text side-by-side */
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Facts section layout: image and lists side-by-side */
+.facts-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.facts-image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.facts-content {
+  flex: 1;
+}
+
+/* ================================
+   IMAGES & FIGURES
+   note to self: figures are the new semantic container to for sticking things together
+   image is alone, figure is if plus caption. this helps screen readers so don't forget!
+   ================================ */
+
+/* General image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.5em;
+}
+
+/* Figure and caption styling */
+figure {
+  margin: 1em 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Making photos sit side-by-side */
+.photo-row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.photo-row figure {
+  width: 45%;
+  text-align: center;
+}
+
+.photo-row img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.photo-row figcaption {
+  font-size: 0.9em;
+  color: #ccc;
+  margin-top: 0.5em;
+}
+
+
+.wrap-image {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
+/* Float image to the right with wrap */
+.float-right {
+  float: right;
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
+/* Clear float after section to prevent layout issues */
+.contact-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/* Clear float after wrapping section */
+.facts-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/* ================================
+   LISTS
+   ================================ */
+
+/* Indent unordered and ordered lists */
+ul, ol {
+  margin-left: 2em;
+}
+
+/* Container for the Top 3 lists because columns didn't work*/
+.top-threes {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  margin-top: 2em;
+}
+
+/* Each Top 3 block */
+.top-three {
+  flex: 1;
+  min-width: 250px; /* ensures they don’t shrink too small (again) */
+}
+
+/* Optional: style the lists */
+.top-three ol {
+  margin-left: 1.5em;
+  padding-left: 0;
+}
